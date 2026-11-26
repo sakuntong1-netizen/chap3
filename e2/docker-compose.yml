@@ -1,0 +1,14 @@
+version: '3.8'
+services:
+  web_app:
+    build:
+      context: .
+      dockerfile: Dockerfile.app
+    ports:
+      - "8080:5000"
+  socket_server:
+    build:
+      context: .
+      dockerfile: Dockerfile.socket
+    ports:
+      - "12345:12345"
